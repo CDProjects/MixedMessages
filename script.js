@@ -17,23 +17,45 @@ const boxingFacts = [
     }
   ];
   
+  const boxingGloveAscii = `
+       ____   
+     .';:.   '.
+    /:   '.   :\\
+   |.-.   '.-.  |
+   |   |    |   |
+   |.-.      .-.|
+   |   |    |   |
+    \\:   '.   :/
+     '.':.   .'
+       ````   
+  `;
+  
   function getRandomBoxingFact() {
     const randomIndex = Math.floor(Math.random() * boxingFacts.length);
     return boxingFacts[randomIndex].fact;
+  }
+  
+  function getRandomAsciiArt() {
+    return boxingGloveAscii;
   }
   
   function generateRandomMessage() {
     const fact1 = getRandomBoxingFact();
     const fact2 = getRandomBoxingFact();
     const fact3 = getRandomBoxingFact();
+    const art = getRandomAsciiArt();
   
-    // Combine the random facts into a cohesive message
-    const message = `Did you know that ${fact1} Also, ${fact2} And don't forget, ${fact3}`;
+    // Combine the random facts, ASCII art, and message
+    const message = `
+  ${art}
+  Did you know that ${fact1}
+  Also, ${fact2}
+  And don't forget, ${fact3}
+  `;
   
     return message;
   }
   
   const randomMessage = generateRandomMessage();
   console.log(randomMessage);
-  
   
