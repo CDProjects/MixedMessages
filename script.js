@@ -20,14 +20,14 @@ const boxingFacts = [
   const boxingGloveAscii = `
        ____   
      .';:.   '.
-    /:   '.   :\\
+    /:   '.   :\
    |.-.   '.-.  |
    |   |    |   |
    |.-.      .-.|
    |   |    |   |
     \\:   '.   :/
      '.':.   .'
-       ````   
+       ''''   
   `;
   
   function getRandomBoxingFact() {
