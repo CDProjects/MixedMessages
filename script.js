@@ -22,6 +22,18 @@ const boxingFacts = [
     return boxingFacts[randomIndex].fact;
   }
   
-  const randomFact = getRandomBoxingFact();
-  console.log(randomFact);
+  function generateRandomMessage() {
+    const fact1 = getRandomBoxingFact();
+    const fact2 = getRandomBoxingFact();
+    const fact3 = getRandomBoxingFact();
+  
+    // Combine the random facts into a cohesive message
+    const message = `Did you know that ${fact1} Also, ${fact2} And don't forget, ${fact3}`;
+  
+    return message;
+  }
+  
+  const randomMessage = generateRandomMessage();
+  console.log(randomMessage);
+  
   
